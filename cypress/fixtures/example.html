@@ -1,0 +1,48 @@
+<html>
+<head> <script type='text/javascript'> document.domain = 'vegantaz.com'; !function(e){var t={};function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)n.d(r,o,function(t){return e[t]}.bind(null,o));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=0)}({"./injection/index.js":function(e,t,n){"use strict";n.r(t);const r=window.Cypress=parent.Cypress;if(!r)throw new Error("Something went terribly wrong and we cannot proceed. We expected to find the global Cypress in the parent window but it is missing!. This should never happen and likely is a bug. Please open an issue!");const o=(()=>{let e,t,n,r;const o=()=>{e=!1,t=!1,n=[],r={}},i=(e,t=[])=>"function"==typeof e?e.apply(window,t):window.eval(e);return o(),{wrap:()=>{const o={setTimeout:window.setTimeout,setInterval:window.setInterval,requestAnimationFrame:window.requestAnimationFrame,clearTimeout:window.clearTimeout,clearInterval:window.clearInterval},a=(e,t)=>o[e].apply(window,t),s=e=>n=>(t&&(r[n]=!0),a(e,[n])),u=t=>(...r)=>{let o,[s,u,...l]=r;return o=a(t,[(...r)=>{if(!e)return i(s,r);n.push({timerId:o,fnOrCode:s,params:r,type:t})},u,...l]),o};window.setTimeout=u("setTimeout"),window.setInterval=u("setInterval"),window.requestAnimationFrame=u("requestAnimationFrame"),window.clearTimeout=s("clearTimeout"),window.clearInterval=s("clearInterval")},reset:o,pause:a=>{e=Boolean(a),e||(t=!0,n.forEach(e=>{const{timerId:t,type:n,fnOrCode:o,params:a}=e;"setInterval"===n&&r[t]||i(o,a)}),o())}}})();r.removeAllListeners("app:timers:reset"),r.removeAllListeners("app:timers:pause"),r.on("app:timers:reset",o.reset),r.on("app:timers:pause",o.pause),o.wrap(),r.action("app:window:before:load",window)},0:function(e,t,n){e.exports=n("./injection/index.js")}}); </script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/my.personal.css">
+	<script type="text/JavaScript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://apis.google.com/js/platform.js"></script>
+	<title>VeganTaz</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a id="nav-vegthetics" class="navbar-brand" href="index.html">VeganTaz</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a id="nav-index" class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a id="nav-fatloss" class="nav-link" href="fatloss.html">Fatloss</a>
+      </li>
+      <li class="nav-item">
+        <a id="nav-exercise" class="nav-link" href="exercise.html">Exercise</a>
+      </li>
+      <li class="nav-item">
+        <a id="nav-diet" class="nav-link" href="diet.html">Diet</a>
+      </li>
+	  <li class="nav-item">
+        <a id="nav-training" class="nav-link" href="training.html">Training</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+	<div class="row">
+		<h1 id='intercept-one'>Intercepted webpage</h1>
+	</div>
+	<div class="row">
+		<h2 id='intercept-two'>This is some random text</h2>
+	</div>
+	<div class="row">
+		<h3 id='intercept-three'>To show you that I have successfully Intercepted</h3>
+	</div>	
+</div>
+</div>
+</body>
+</html>
