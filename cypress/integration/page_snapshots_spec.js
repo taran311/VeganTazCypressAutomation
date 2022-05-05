@@ -1,8 +1,9 @@
 var baseUrl = 'http://vegantaz.com';
+var dietPage = `${baseUrl}/diet.html`
 
-describe('Homepage Navigation Steps', () => {
-    it('Homepage correctly navigates to Fatloss', () => {
-        cy.visit(baseUrl)
+describe('Page Snapshots example', () => {
+    it('Snapshot Example Test for diet page', () => {
+        cy.visit(dietPage)
         .then(() => {
             //uncomment below line to fail testit
             //cy.visit(`${baseUrl}/training.html`)
